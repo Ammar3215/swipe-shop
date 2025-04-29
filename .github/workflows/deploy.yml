@@ -21,12 +21,17 @@ jobs:
 
       - name: Build
         run: |
+          echo "Building the site..."
           npm run build
+          echo "Creating .nojekyll file..."
           touch out/.nojekyll
+          echo "Listing build directory contents..."
+          ls -la out/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          commit_message: "Deploy to GitHub Pages" 
+          commit_message: "Deploy to GitHub Pages"
+          force: true 

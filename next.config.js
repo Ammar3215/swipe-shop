@@ -7,6 +7,7 @@ const nextConfig = {
   basePath: '/swipe-shop',
   assetPrefix: '/swipe-shop/',
   trailingSlash: true,
+  distDir: 'out',
 }
 
 module.exports = nextConfig 
