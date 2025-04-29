@@ -4,8 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/swipe-shop' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/swipe-shop/' : '',
+  basePath: '/swipe-shop',
+  assetPrefix: '/swipe-shop/',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 
